@@ -1,0 +1,31 @@
+# Project Intelligence
+
+## Project Patterns
+- Project is focused on Brazilian states data analysis and article generation
+- Articles are written in Portuguese
+- Numbers follow Brazilian formatting standards
+- All sources are cited using markdown links
+- Code comments and documentation are in English
+
+## File Organization
+- Source code: automacao.py in root directory
+- Memory bank: Organized documentation in memory-bank/
+- Data sources: External CSV files in D:\jornalera-marista\censo-2022\dados\estados\
+
+## Implementation Notes
+- Primary focus is on Acre state as prototype
+- Articles follow structured paragraph format
+- API calls use low temperature for consistency
+- Error handling includes graceful fallbacks
+
+## Workflow Preferences
+- Test changes with Acre state first
+- Validate outputs before scaling to all states
+- Keep documentation updated as features are added
+- Track progress in memory-bank/progress.md
+
+## Known Patterns
+- CSV data requires specific column handling
+- API responses need consistent formatting
+- Numbers should use locale-specific formatting
+- Historical data requires source citations
