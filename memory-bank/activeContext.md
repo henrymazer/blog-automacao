@@ -64,6 +64,20 @@
 - Structured prompts for consistency
 - Error handling with fallbacks
 
+### Text Formatting Conventions
+- Regular paragraphs have a single line break between them
+- Section headers (H2/H3) have double line break before and single after
+- Headers use Markdown H2 (##) and H3 (###) notation
+- Images follow Markdown format: ![Alt text](path)
+- No extra line break after the final paragraph
+- Source links use Markdown format: [text](url)
+- Consistent spacing for all content types:
+  - Text paragraphs
+  - Headers
+  - Images
+  - Lists
+  - Source citations
+
 ## Current Considerations
 1. Code Quality
    - All modules properly documented
@@ -84,3 +98,5 @@
    - Reusable formatting utilities
    - Consistent naming conventions
    - Simplified project structure
+
+Note: Final HTML generation will handle any remaining spacing inconsistencies.

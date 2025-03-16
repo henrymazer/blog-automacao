@@ -48,6 +48,7 @@ def format_historical_info(content: Optional[str]) -> Optional[str]:
     if not content:
         return None
     
+    # Split paragraphs and clean each one
     paragraphs = [p.strip() for p in content.split('\n') if p.strip()]
     formatted = []
     
@@ -55,14 +56,59 @@ def format_historical_info(content: Optional[str]) -> Optional[str]:
         # Remove extra spaces
         p = ' '.join(p.split())
         
-        # Format citations
+        # Format citations to match exact format
         p = p.replace('[1][3]', ' [Fonte: História do Acre](https://www.historia.acre.gov.br)')
         p = p.replace('[[', '[')
         p = p.replace('o[', 'o [')
+        p = p.replace('[Fonte:', ' [Fonte:')
         
         formatted.append(p)
     
+    # Join with double line breaks
     return '\n\n'.join(formatted)
+
+def format_health_info(content: Optional[str]) -> Optional[str]:
+    """Format health system information with proper spacing and citations.
+    
+    Args:
+        content: Raw health system information text
+        
+    Returns:
+        Formatted text with proper spacing and citations
+    """
+    if not content:
+        return None
+    
+    # Split content into text and sources
+    parts = content.split('[1]')
+    if len(parts) != 2:
+        return content
+    
+    main_text = parts[0].strip()
+    sources = '[1]' + parts[1].strip()
+    
+    # Clean up main text
+    main_text = ' '.join(main_text.split())  # normalize spaces
+    main_text = main_text.replace('..', '.')  # fix double periods
+    
+    # Split into sentences and clean
+    sentences = []
+    for s in main_text.split('.'):
+        s = s.strip()
+        if s:
+            if not s.endswith('.'):
+                s += '.'
+            sentences.append(s)
+    
+    # Format sources
+    sources = sources.replace(' [', '\n\n[')  # separate source list with line breaks
+    sources = sources.replace('.html]', '.html)]')  # fix link formatting
+    
+    # Combine everything with proper spacing
+    formatted_text = '\n\n'.join(sentences)
+    formatted_text = formatted_text.rstrip('.')  # remove trailing period before sources
+    
+    return f"{formatted_text}\n\n{sources}"
 
 def get_ranking_description(position: int, total: int, regional_position: Optional[int] = None, region: Optional[str] = None) -> str:
     """Generate ranking description in Portuguese based on position.

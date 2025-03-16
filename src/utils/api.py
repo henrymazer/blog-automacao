@@ -85,7 +85,9 @@ class PerplexityAPI:
         messages = [
             {
                 "role": "system",
-                "content": "Write a brief, concise response in Portuguese with exactly two short sentences. Write each sentence on a single line, followed by its source link. Keep sentences short and simple."
+                "content": ("Write a brief, concise response in Portuguese with exactly two short sentences. "
+                          "Each sentence should end with its source in this exact format: ' [Fonte: Title]"
+                          "(url)'. Start each sentence with 'Em {year}'. Keep sentences brief.")
             },
             {
                 "role": "user",
@@ -93,8 +95,42 @@ class PerplexityAPI:
                     f"What was the main economic activity and political organization of Acre, Brazil "
                     f"in {year}? Write two short sentences in Portuguese, first about economic "
                     f"activity, second about political organization. Start each with 'Em {year}'. "
-                    f"After each sentence, add a source like '[História do Acre]"
-                    f"(https://www.historia.acre.gov.br)'. Keep sentences brief."
+                    f"After each sentence, add a source link in this format: ' [Fonte: Title]"
+                    f"(url)'. Keep sentences brief."
+                )
+            }
+        ]
+        
+        result = self._make_request(messages, max_tokens=500)
+        if result and 'choices' in result:
+            return result['choices'][0]['message']['content']
+        return None
+
+    def get_health_system_news(self, state_name: str) -> Optional[str]:
+        """Get recent news about state's health system and analyze its future.
+        
+        Args:
+            state_name: Full name of the state in Portuguese
+            
+        Returns:
+            Formatted paragraph with news and analysis, or None if request fails
+        """
+        messages = [
+            {
+                "role": "system",
+                "content": ("Write a concise response in Portuguese about the current health system "
+                          "with exactly 3 complete sentences: recent achievements, specific improvements, "
+                          "and current challenges/future concerns. Each sentence must end with "
+                          "a period. Do not include source references in the sentences. After the "
+                          "sentences, list sources separately, each on its own line.")
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Escreva sobre a situação atual do sistema de saúde do {state_name}, "
+                    f"em 4 frases: conquistas recentes, melhorias específicas, desafios atuais "
+                    f"e preocupações futuras. Indique fontes com [1], [2], etc. e liste-as no final. "
+                    f"Use dados recentes de 2022-2024."
                 )
             }
         ]
@@ -102,7 +138,7 @@ class PerplexityAPI:
         result = self._make_request(messages, max_tokens=500)
         if result and 'choices' in result:
             content = result['choices'][0]['message']['content']
-            # Clean up response and ensure proper formatting
-            paragraphs = [p.strip() for p in content.split('\n\n') if p.strip()]
-            return '\n\n'.join(paragraphs)
+            # Clean up formatting
+            content = content.replace('\n', ' ').strip()
+            return content
         return None
