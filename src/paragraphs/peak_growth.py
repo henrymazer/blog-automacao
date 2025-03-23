@@ -1,25 +1,28 @@
 import pandas as pd
-from ..utils.formatting import format_number
+from src.utils.formatting import BrazilianFormatter
 
-def get_peak_growth_period(df, state):
-    """
-    Find the period of highest geometric growth rate for a given state.
+def generate_peak_growth_paragraph(data_loader, state_code: str = 'AC') -> str:
+    """Generate paragraph about the period of highest growth for a state.
     
     Args:
-        df (pd.DataFrame): DataFrame containing the census data
-        state (str): Name of the state to analyze
+        data_loader: DataLoader instance with census and growth data
+        state_code: Two-letter state code (default: 'AC' for Acre)
         
     Returns:
-        tuple: (start_year, end_year, growth_rate) or None if no valid data
+        Formatted paragraph text describing peak growth period
     """
-    # Filter state data
-    state_data = df[df['Estado'] == state]
+    # Get state info
+    state_info, _, _, _ = data_loader.get_state_data(state_code)
+    state_name = state_info['name']
+    
+    # Get growth data from DataFrame
+    df = data_loader.df_growth
+    state_data = df[df['Estado'] == state_code]
     if state_data.empty:
         return None
-        
-    # Get all growth rate columns (they start with "Taxa_Crescimento_Geometrico_")
-    growth_cols = [col for col in df.columns if col.startswith("Taxa_Crescimento_Geometrico_")]
     
+    # Find peak growth period
+    growth_cols = [col for col in df.columns if col.startswith("Taxa_Crescimento_Geometrico_")]
     max_rate = float('-inf')
     max_period = None
     
@@ -33,27 +36,15 @@ def get_peak_growth_period(df, state):
         # Check if rate is valid (not NaN or null)
         if pd.notna(rate) and rate > max_rate:
             max_rate = rate
-            max_period = (start_year, end_year, rate * 100)  # Convert to percentage
+            max_period = (start_year, end_year, rate)
     
-    return max_period if max_rate != float('-inf') else None
-
-def generate_peak_growth_paragraph(state, start_year, end_year, growth_rate):
-    """
-    Generate a paragraph describing the period of highest growth for a state.
-    
-    Args:
-        state (str): Name of the state
-        start_year (str): Starting census year
-        end_year (str): Ending census year
-        growth_rate (float): Growth rate for the period
+    if not max_period:
+        return None
         
-    Returns:
-        str: Formatted paragraph text
-    """
-    formatted_rate = f"{growth_rate:.1f}".replace('.', ',')
+    start_year, end_year, growth_rate = max_period
     
-    return (
-        f"O período de maior crescimento populacional do {state} foi entre os censos de "
-        f"{start_year} e {end_year}, quando o estado registrou uma taxa de crescimento "
-        f"geométrico de {formatted_rate}%."
-    )
+    # Format the growth rate using Brazilian standards
+    formatter = BrazilianFormatter()
+    formatted_rate = formatter.format_percentage(growth_rate)
+    
+    return f"O período de maior crescimento populacional do {state_name} foi entre os censos de {start_year} e {end_year}, quando o estado registrou uma taxa de crescimento geométrico de {formatted_rate}."

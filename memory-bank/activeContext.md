@@ -1,59 +1,97 @@
 # Active Context
 
 ## Current Focus
-- Testing complete article generation for Acre state
-- Validating all twelve paragraphs of content
-- Testing population projection integration
-- Validating graph integration and formatting
+- Text improvements completed and validated
+- Content structure optimized
+- Preparing for markdown file generation
+- Multi-state processing planning
+- Infrastructure updates for scaling
 
 ## Recent Changes
-- Implemented future projection section:
-  1. Population peak analysis
-  2. Graph visualization integration
-  3. Projection charts and descriptions
-  4. Future section with clear headers
-- Added new modules:
-  1. Peak growth analysis
-  2. Chart introduction and image handling
-  3. Population projection functionality
-  4. Graph description generation
-- Integrated markdown image support
-- Enhanced state data analysis capabilities
+1. Text Style Improvements:
+   - Standardized verb tenses
+   - Enhanced readability and flow
+   - Optimized paragraph structure
+   - Improved contextual connections
+   - Better thematic coherence
+
+2. Content Consolidation:
+   - Combined related paragraphs
+   - Streamlined information flow
+   - Enhanced narrative consistency
+   - Maintained information density
+   - Improved transitions
+
+3. Population Analysis:
+   - Enhanced peak comparison descriptions
+   - Clarified demographic transitions
+   - Consistent future projections
+   - Better data visualization context
+   - Improved regional comparisons
+
+4. Health System Information:
+   - Enhanced source citation formatting
+   - Added reference cleanup utility
+   - Implemented smart fallbacks
+   - Improved aging population context
+   - Better prompt engineering
 
 ## Next Steps
-1. Complete remaining paragraphs for Acre article
-2. Add unit tests for individual modules
-3. Implement loop to handle all Brazilian states
-4. Add HTML generation functionality
-5. Consider configuration file for API keys and paths
+1. Update memory-bank files for HTML generation
+2. Implement HTML generation for all states
+3. Add error handling for missing files
+4. Complete configuration system
+5. Enable multi-state processing
+6. Monitor content consistency
 
 ## Active Decisions
 
-### Article Structure
-- Paragraphs follow logical progression from population stats to historical context
-- Sources are cited inline using markdown links
-- Numbers formatted according to Brazilian standards
-- Graphs integrated with markdown syntax
-- Population projections formatted consistently
-- Future predictions clearly separated in sections
+### Code Organization
+- Using class-based approach for core functionality
+- Separate modules for different responsibilities
+- Type hints for better maintainability
+- Consistent error handling patterns
+- Single entry point through automacao.py
 
 ### API Usage
-- Using Perplexity AI for historical information
-- Low temperature (0.2) setting for consistent responses
-- Structured prompts for standardized output format
+- Encapsulated Perplexity AI interactions
+- Low temperature (0.2) setting maintained
+- Structured prompts for consistency
+- Error handling with fallbacks
+- Reference cleanup for better formatting
+- Multi-stage fallback system for robustness
+
+### Text Formatting Conventions
+- Regular paragraphs have a single line break between them
+- Section headers (H2/H3) have double line break before and single after
+- Headers use Markdown H2 (##) and H3 (###) notation
+- Images follow Markdown format: ![Alt text](path)
+- No extra line break after the final paragraph
+- Source links use Markdown format: [Fonte: text](url)
+- Consistent verb tenses throughout
+- Clear and direct language
+- Standardized punctuation
 
 ## Current Considerations
-1. Data Quality
-   - Ensuring accurate population data from CSV files
-   - Validating API responses for historical information
-   - Handling missing or incomplete data points
+1. Code Quality
+   - All modules properly documented
+   - Type hints for better IDE support
+   - Error handling improved
+   - Code reusability enhanced
+   - Clear entry point established
+   - Reference cleanup utilities added
 
 2. Scalability
-   - Preparing code for multi-state processing
-   - Managing API rate limits
-   - Optimizing data processing for larger datasets
+   - Ready for multi-state processing
+   - Modular architecture supports expansion
+   - Consistent interface across components
+   - Error handling at all levels
+   - Robust fallback mechanisms
 
-3. Output Format
-   - Planning HTML structure for articles
-   - Maintaining consistent formatting across states
-   - Ensuring proper citation formatting
+3. Maintainability
+   - Clear separation of concerns
+   - Well-documented classes and functions
+   - Reusable formatting utilities
+   - Consistent naming conventions
+   - Simplified project structure
+   - Enhanced source formatting

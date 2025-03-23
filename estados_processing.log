@@ -1,0 +1,135 @@
+2025-03-23 12:37:53,628 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 12:38:21,747 - ERROR - Erro ao gerar arquivo para Paraná (PR): [Errno 2] No such file or directory: 'D:\\jornalera-marista\\censo-2022\\artigos\\estado_PR.md'
+2025-03-23 12:38:49,107 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 12:39:13,247 - ERROR - Erro ao gerar arquivo para Paraná (PR): [Errno 2] No such file or directory: 'artigos\\estado_PR.md'
+2025-03-23 12:40:45,366 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 12:40:45,366 - INFO - Diretório de saída criado: artigos
+2025-03-23 12:41:07,440 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 14:23:55,008 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 14:23:55,009 - INFO - Diretório de saída já existe: artigos
+2025-03-23 14:24:07,196 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 14:59:20,223 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 14:59:20,223 - INFO - Diretório de saída já existe: artigos
+2025-03-23 14:59:34,133 - ERROR - Erro ao gerar arquivo para Paraná (PR): name 'normalize_sources' is not defined
+2025-03-23 15:00:55,018 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 15:00:55,018 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:01:06,540 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 15:06:34,333 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 15:06:34,333 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:06:54,011 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 15:19:07,703 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 15:19:07,703 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:19:20,993 - ERROR - Erro ao gerar arquivo para Paraná (PR): name 'simplify_source_links' is not defined
+2025-03-23 15:19:58,920 - INFO - Gerando arquivo apenas para o estado: PR
+2025-03-23 15:19:58,921 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:20:13,263 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 15:28:23,110 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:28:23,110 - INFO - Processando 1/27: Acre (AC)
+2025-03-23 15:28:23,111 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:28:33,670 - INFO - Arquivo gerado com sucesso: artigos\estado_AC.md
+2025-03-23 15:28:33,670 - INFO - Concluído 1/27: Acre - Arquivo: artigos\estado_AC.md
+2025-03-23 15:28:33,671 - INFO - Processando 2/27: Alagoas (AL)
+2025-03-23 15:28:33,671 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:28:46,728 - INFO - Arquivo gerado com sucesso: artigos\estado_AL.md
+2025-03-23 15:28:46,728 - INFO - Concluído 2/27: Alagoas - Arquivo: artigos\estado_AL.md
+2025-03-23 15:28:46,728 - INFO - Processando 3/27: Amapá (AP)
+2025-03-23 15:28:46,729 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:28:58,153 - INFO - Arquivo gerado com sucesso: artigos\estado_AP.md
+2025-03-23 15:28:58,154 - INFO - Concluído 3/27: Amapá - Arquivo: artigos\estado_AP.md
+2025-03-23 15:28:58,154 - INFO - Processando 4/27: Amazonas (AM)
+2025-03-23 15:28:58,154 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:29:13,528 - INFO - Arquivo gerado com sucesso: artigos\estado_AM.md
+2025-03-23 15:29:13,529 - INFO - Concluído 4/27: Amazonas - Arquivo: artigos\estado_AM.md
+2025-03-23 15:29:13,529 - INFO - Processando 5/27: Bahia (BA)
+2025-03-23 15:29:13,530 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:29:24,797 - INFO - Arquivo gerado com sucesso: artigos\estado_BA.md
+2025-03-23 15:29:24,797 - INFO - Concluído 5/27: Bahia - Arquivo: artigos\estado_BA.md
+2025-03-23 15:29:24,798 - INFO - Processando 6/27: Ceará (CE)
+2025-03-23 15:29:24,798 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:29:36,031 - INFO - Arquivo gerado com sucesso: artigos\estado_CE.md
+2025-03-23 15:29:36,032 - INFO - Concluído 6/27: Ceará - Arquivo: artigos\estado_CE.md
+2025-03-23 15:29:36,032 - INFO - Processando 7/27: Distrito Federal (DF)
+2025-03-23 15:29:36,033 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:29:46,858 - INFO - Arquivo gerado com sucesso: artigos\estado_DF.md
+2025-03-23 15:29:46,859 - INFO - Concluído 7/27: Distrito Federal - Arquivo: artigos\estado_DF.md
+2025-03-23 15:29:46,859 - INFO - Processando 8/27: Espírito Santo (ES)
+2025-03-23 15:29:46,860 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:29:57,984 - INFO - Arquivo gerado com sucesso: artigos\estado_ES.md
+2025-03-23 15:29:57,985 - INFO - Concluído 8/27: Espírito Santo - Arquivo: artigos\estado_ES.md
+2025-03-23 15:29:57,985 - INFO - Processando 9/27: Goiás (GO)
+2025-03-23 15:29:57,986 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:30:08,025 - INFO - Arquivo gerado com sucesso: artigos\estado_GO.md
+2025-03-23 15:30:08,025 - INFO - Concluído 9/27: Goiás - Arquivo: artigos\estado_GO.md
+2025-03-23 15:30:08,026 - INFO - Processando 10/27: Maranhão (MA)
+2025-03-23 15:30:08,027 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:30:18,538 - INFO - Arquivo gerado com sucesso: artigos\estado_MA.md
+2025-03-23 15:30:18,540 - INFO - Concluído 10/27: Maranhão - Arquivo: artigos\estado_MA.md
+2025-03-23 15:30:18,541 - INFO - Processando 11/27: Mato Grosso (MT)
+2025-03-23 15:30:18,541 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:30:31,046 - INFO - Arquivo gerado com sucesso: artigos\estado_MT.md
+2025-03-23 15:30:31,047 - INFO - Concluído 11/27: Mato Grosso - Arquivo: artigos\estado_MT.md
+2025-03-23 15:30:31,047 - INFO - Processando 12/27: Mato Grosso do Sul (MS)
+2025-03-23 15:30:31,047 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:30:41,286 - INFO - Arquivo gerado com sucesso: artigos\estado_MS.md
+2025-03-23 15:30:41,287 - INFO - Concluído 12/27: Mato Grosso do Sul - Arquivo: artigos\estado_MS.md
+2025-03-23 15:30:41,288 - INFO - Processando 13/27: Minas Gerais (MG)
+2025-03-23 15:30:41,288 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:30:52,533 - INFO - Arquivo gerado com sucesso: artigos\estado_MG.md
+2025-03-23 15:30:52,534 - INFO - Concluído 13/27: Minas Gerais - Arquivo: artigos\estado_MG.md
+2025-03-23 15:30:52,534 - INFO - Processando 14/27: Pará (PA)
+2025-03-23 15:30:52,535 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:31:03,972 - INFO - Arquivo gerado com sucesso: artigos\estado_PA.md
+2025-03-23 15:31:03,973 - INFO - Concluído 14/27: Pará - Arquivo: artigos\estado_PA.md
+2025-03-23 15:31:03,973 - INFO - Processando 15/27: Paraíba (PB)
+2025-03-23 15:31:03,974 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:31:18,091 - INFO - Arquivo gerado com sucesso: artigos\estado_PB.md
+2025-03-23 15:31:18,092 - INFO - Concluído 15/27: Paraíba - Arquivo: artigos\estado_PB.md
+2025-03-23 15:31:18,092 - INFO - Processando 16/27: Paraná (PR)
+2025-03-23 15:31:18,092 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:31:28,842 - INFO - Arquivo gerado com sucesso: artigos\estado_PR.md
+2025-03-23 15:31:28,843 - INFO - Concluído 16/27: Paraná - Arquivo: artigos\estado_PR.md
+2025-03-23 15:31:28,843 - INFO - Processando 17/27: Pernambuco (PE)
+2025-03-23 15:31:28,844 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:31:41,296 - INFO - Arquivo gerado com sucesso: artigos\estado_PE.md
+2025-03-23 15:31:41,296 - INFO - Concluído 17/27: Pernambuco - Arquivo: artigos\estado_PE.md
+2025-03-23 15:31:41,296 - INFO - Processando 18/27: Piauí (PI)
+2025-03-23 15:31:41,297 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:31:53,924 - INFO - Arquivo gerado com sucesso: artigos\estado_PI.md
+2025-03-23 15:31:53,924 - INFO - Concluído 18/27: Piauí - Arquivo: artigos\estado_PI.md
+2025-03-23 15:31:53,925 - INFO - Processando 19/27: Rio de Janeiro (RJ)
+2025-03-23 15:31:53,925 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:32:04,507 - INFO - Arquivo gerado com sucesso: artigos\estado_RJ.md
+2025-03-23 15:32:04,508 - INFO - Concluído 19/27: Rio de Janeiro - Arquivo: artigos\estado_RJ.md
+2025-03-23 15:32:04,508 - INFO - Processando 20/27: Rio Grande do Norte (RN)
+2025-03-23 15:32:04,508 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:32:15,737 - INFO - Arquivo gerado com sucesso: artigos\estado_RN.md
+2025-03-23 15:32:15,737 - INFO - Concluído 20/27: Rio Grande do Norte - Arquivo: artigos\estado_RN.md
+2025-03-23 15:32:15,738 - INFO - Processando 21/27: Rio Grande do Sul (RS)
+2025-03-23 15:32:15,738 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:32:29,924 - INFO - Arquivo gerado com sucesso: artigos\estado_RS.md
+2025-03-23 15:32:29,925 - INFO - Concluído 21/27: Rio Grande do Sul - Arquivo: artigos\estado_RS.md
+2025-03-23 15:32:29,925 - INFO - Processando 22/27: Rondônia (RO)
+2025-03-23 15:32:29,925 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:32:41,502 - INFO - Arquivo gerado com sucesso: artigos\estado_RO.md
+2025-03-23 15:32:41,502 - INFO - Concluído 22/27: Rondônia - Arquivo: artigos\estado_RO.md
+2025-03-23 15:32:41,502 - INFO - Processando 23/27: Roraima (RR)
+2025-03-23 15:32:41,503 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:32:53,312 - INFO - Arquivo gerado com sucesso: artigos\estado_RR.md
+2025-03-23 15:32:53,312 - INFO - Concluído 23/27: Roraima - Arquivo: artigos\estado_RR.md
+2025-03-23 15:32:53,312 - INFO - Processando 24/27: Santa Catarina (SC)
+2025-03-23 15:32:53,313 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:33:05,601 - INFO - Arquivo gerado com sucesso: artigos\estado_SC.md
+2025-03-23 15:33:05,602 - INFO - Concluído 24/27: Santa Catarina - Arquivo: artigos\estado_SC.md
+2025-03-23 15:33:05,602 - INFO - Processando 25/27: São Paulo (SP)
+2025-03-23 15:33:05,602 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:33:17,407 - INFO - Arquivo gerado com sucesso: artigos\estado_SP.md
+2025-03-23 15:33:17,408 - INFO - Concluído 25/27: São Paulo - Arquivo: artigos\estado_SP.md
+2025-03-23 15:33:17,408 - INFO - Processando 26/27: Sergipe (SE)
+2025-03-23 15:33:17,408 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:33:28,916 - INFO - Arquivo gerado com sucesso: artigos\estado_SE.md
+2025-03-23 15:33:28,917 - INFO - Concluído 26/27: Sergipe - Arquivo: artigos\estado_SE.md
+2025-03-23 15:33:28,917 - INFO - Processando 27/27: Tocantins (TO)
+2025-03-23 15:33:28,917 - INFO - Diretório de saída já existe: artigos
+2025-03-23 15:33:39,538 - INFO - Arquivo gerado com sucesso: artigos\estado_TO.md
+2025-03-23 15:33:39,538 - INFO - Concluído 27/27: Tocantins - Arquivo: artigos\estado_TO.md
+2025-03-23 15:33:39,539 - INFO - Processamento concluído: 27/27 estados processados com sucesso

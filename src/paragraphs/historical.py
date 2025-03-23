@@ -1,20 +1,37 @@
-from src.data.loader import get_first_census_data
-from src.utils.api import get_historical_info
-from src.utils.formatting import format_historical_info
+from src.utils.text_utils import format_historical_info
 
-def generate_historical_paragraph(df, state_code='AC'):
-    """Generate the fourth paragraph about historical information."""
+def generate_historical_paragraph(data_loader, api_client, state_code: str = 'AC') -> str:
+    """Generate paragraph about historical information.
+    
+    Args:
+        data_loader: DataLoader instance with census and growth data
+        api_client: PerplexityAPI instance for historical queries
+        state_code: Two-letter state code (default: 'AC' for Acre)
+        
+    Returns:
+        Formatted paragraph text with historical information
+    """
     # Get first census data to get the year
-    census_data = get_first_census_data(df, state_code)
-    if not census_data:
+    first_census = data_loader.get_first_census_data(state_code)
+    if not first_census:
         return None
         
-    primeiro_ano = census_data['ano']
+    first_year, _ = first_census
     
-    # Get and format historical information
-    historical_info = get_historical_info(primeiro_ano)
+    # Get state info
+    try:
+        state_data, _, _, _ = data_loader.get_state_data(state_code)
+        if not state_data:
+            return None
+        
+        state_name = state_data['name']
+    except Exception:
+        return None
+    
+    # Get historical information via API
+    historical_info = api_client.get_historical_info(first_year, state_name)
     if not historical_info:
         return None
         
-    formatted_info = format_historical_info(historical_info)
-    return formatted_info
+    # Format the response
+    return format_historical_info(historical_info)

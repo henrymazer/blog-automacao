@@ -10,7 +10,9 @@
 ## File Organization
 - Source code: automacao.py in root directory
 - Memory bank: Organized documentation in memory-bank/
-- Data sources: External CSV files in D:\jornalera-marista\censo-2022\dados\estados\
+- Data sources: External CSV files in D:\jornalera-marista\censo-2022\dados\estados\:
+  * Dados_com_Posi__o_do_Auge_por_Regi_o_ranking.csv (Contains state population data, historical census records, and regional rankings)
+  * compilado_estados.csv (Contains growth rate data, state metadata, and regional information)
 
 ## Implementation Notes
 - Primary focus is on Acre state as prototype

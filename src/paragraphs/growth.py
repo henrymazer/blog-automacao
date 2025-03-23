@@ -1,19 +1,28 @@
-from src.data.loader import get_first_census_data, get_growth_data, get_state_data
+from src.utils.formatting import BrazilianFormatter
 
-def generate_growth_paragraph(df, df_crescimento, state_code='AC'):
-    """Generate the first paragraph about population growth."""
-    # Get state data
-    state_data = get_state_data(df, state_code)
-    nome_estado = state_data['nome_estado']
+def generate_growth_paragraph(data_loader, state_code: str = 'AC') -> str:
+    """Generate the first paragraph about population growth.
+    
+    Args:
+        data_loader: DataLoader instance with census and growth data
+        state_code: Two-letter state code (default: 'AC' for Acre)
+        
+    Returns:
+        Formatted paragraph string about population growth
+    """
+    # Get state data and growth
+    state_info, growth, _, _ = data_loader.get_state_data(state_code)
+    state_name = state_info['name']
     
     # Get first census data
-    census_data = get_first_census_data(df, state_code)
-    primeiro_ano = census_data['ano'] if census_data else None
+    first_census = data_loader.get_first_census_data(state_code)
+    if not first_census:
+        return None
     
-    # Get growth data
-    crescimento = get_growth_data(df_crescimento, state_code)
+    first_year, _ = first_census
     
-    if primeiro_ano:
-        return f"Desde {primeiro_ano} até 2024 o {nome_estado} cresceu {int(crescimento)} vezes."
+    # Format the growth number
+    formatter = BrazilianFormatter()
+    growth_formatted = formatter.format_number(int(growth))
     
-    return None
+    return f"Desde o ano de {first_year} até 2024, a população do estado do {state_name} cresceu em {growth_formatted} vezes."
